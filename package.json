@@ -19,13 +19,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "dev": "react-scripts start",
+    "heroku-postbuild": "npm run build",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css",
     "minify:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.min.css --output-style compressed",
     "map:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css --source-map true",
-    "build:scss": "npm run compile:scss && npm run minify:scss && npm run map:scss",
-    "dev": "react-scripts start",
-    "heroku-postbuild": "npm run build"
+    "build:scss": "npm run compile:scss && npm run minify:scss && npm run map:scss"
+
   },
   "eslintConfig": {
     "extends": "react-app"
